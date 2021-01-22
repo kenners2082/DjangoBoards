@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# use `re_path` when using regular expression paths
+from django.urls import include, re_path
 
 from boards import views  # importing views module from board app
 
+# urlpatterns order matters
 urlpatterns = [
     path('', views.home, name='home'),
+    re_path(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     path('admin/', admin.site.urls),
 ]
