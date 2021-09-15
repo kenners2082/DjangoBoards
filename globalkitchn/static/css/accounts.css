@@ -1,0 +1,12 @@
+body {
+  background-image: url(../img/papyrus.png);
+}
+
+.logo {
+  font-family: "Megrim", cursive;
+}
+
+.logo a {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
